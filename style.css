@@ -1,0 +1,314 @@
+/* ─────────────────────────────────────────────
+   STORRIS INNOVATIONS – styles.css
+   Colors: #FF5A24 (orange) · #2E3156 (navy)
+   Fonts: Poppins + Inter
+───────────────────────────────────────────── */
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --orange: #FF5A24;
+  --navy: #2E3156;
+  --text: #1a1c2e;
+  --muted: #6b6f8a;
+  --bg: #ffffff;
+  --soft: #f7f8fc;
+  --border: #e5e7ef;
+
+  --font-head: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --nav-h: 72px;
+}
+
+/* BASE */
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* NAV */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-h);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+  z-index: 100;
+}
+
+.nav-wrapper.scrolled {
+  border-color: var(--border);
+}
+
+.nav-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-weight: 600;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  background: var(--navy);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.logo-accent {
+  color: var(--orange);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--navy);
+}
+
+.nav-cta {
+  background: var(--orange);
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+/* MOBILE NAV */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  background: none;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+}
+
+/* HERO */
+.hero {
+  padding-top: var(--nav-h);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-title {
+  font-family: var(--font-head);
+  font-size: 3rem;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.hero-title em {
+  color: var(--orange);
+  font-style: normal;
+}
+
+.hero-subtitle {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid var(--navy);
+  color: var(--navy);
+}
+
+/* SECTIONS */
+.section-pad {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: var(--font-head);
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.section-label {
+  color: var(--orange);
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ABOUT */
+.about {
+  background: var(--soft);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about-img-placeholder {
+  height: 260px;
+  border: 2px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PRODUCTS */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* PROCESS */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step {
+  padding: 10px;
+}
+
+/* CONTACT */
+.contact {
+  background: var(--navy);
+  color: #fff;
+}
+
+.contact a {
+  color: var(--orange);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e2038;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .about-grid,
+  .products-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

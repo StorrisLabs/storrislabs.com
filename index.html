@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Storris Innovations – Custom 3D Printed Radiation Therapy Devices</title>
+  <meta name="description" content="Storris Innovations supplies radiation therapy clinics with custom 3D printed bolus, physics QA devices, and ear positioning solutions." />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper" id="navbar">
+    <nav class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">Storris <span class="logo-accent">Innovations</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#how-it-works">Process</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg-grid"></div>
+
+      <div class="container hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          Precision for Radiation Oncology
+        </div>
+
+        <h1 class="hero-title">
+          Custom 3D Printed Devices<br />
+          <em>Built for the Clinic.</em>
+        </h1>
+
+        <p class="hero-subtitle">
+          We partner with radiation therapy clinics to deliver custom 3D printed bolus,
+          physics QA devices, and positioning solutions built to your exact specifications.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Explore Products</a>
+          <a href="#contact" class="btn btn-outline">Request a Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section-pad" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="about-img-placeholder">
+            <p>Add your product or clinic image</p>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="section-label">Who We Are</span>
+
+          <h2 class="section-title">
+            Designed for Clinics.<br />
+            Built for Precision.
+          </h2>
+
+          <p class="body-text">
+            Storris Innovations provides radiation oncology teams with reliable,
+            custom-built 3D printed devices designed to support accurate setup and
+            consistent treatment delivery.
+          </p>
+
+          <p class="body-text">
+            Every device is tailored to your clinical workflow and specifications,
+            with a focus on fit, repeatability, and practical use in the treatment room.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products section-pad" id="products">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Products</span>
+          <h2 class="section-title">What We Offer</h2>
+        </div>
+
+        <div class="products-grid">
+
+          <div class="product-card">
+            <h3>3D Printed Bolus</h3>
+            <p>
+              Patient-specific bolus designed for consistent surface dose delivery
+              and improved conformity.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <h3>Physics QA Devices</h3>
+            <p>
+              Custom QA tools built to support your department’s measurement and
+              verification workflows.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <h3>Ear Shelf</h3>
+            <p>
+              A positioning device designed to hold the ear away from the head during
+              treatment to support accurate setup.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process section-pad" id="how-it-works">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">Process</span>
+          <h2 class="section-title">How It Works</h2>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <h3>1. Submit Request</h3>
+            <p>Provide your specifications, CT data, or device requirements.</p>
+          </div>
+
+          <div class="step">
+            <h3>2. Design</h3>
+            <p>We design your device and send it for review and approval.</p>
+          </div>
+
+          <div class="step">
+            <h3>3. Manufacture</h3>
+            <p>We produce your device with precision and quality control.</p>
+          </div>
+
+          <div class="step">
+            <h3>4. Delivery</h3>
+            <p>Your device is shipped directly to your clinic.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section-pad" id="contact">
+      <div class="container">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: <a href="mailto:info@storrislabs.com">info@storrislabs.com</a></p>
+
+        <form id="contactForm">
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+
+        <div id="formSuccess" style="display:none;">
+          Thank you — we’ll be in touch soon.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Storris Innovations</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
