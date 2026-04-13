@@ -539,16 +539,6 @@ img {
   line-height: 1.65;
 }
 
-.product-detail {
-  font-size: 0.8rem;
-  font-weight: 500;
-  font-style: italic;
-  color: var(--navy);
-  opacity: 0.5;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
 /* ── PROCESS ── */
 .process {
   background: var(--soft);
