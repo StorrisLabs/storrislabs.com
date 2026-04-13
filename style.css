@@ -94,8 +94,8 @@ img {
   align-items: center;
   gap: 10px;
   font-family: var(--font-head);
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-weight: 700;
+  font-size: 1.15rem;
 }
 
 .logo-mark {
@@ -537,6 +537,16 @@ img {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.65;
+}
+
+.product-detail {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--navy);
+  opacity: 0.5;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 /* ── PROCESS ── */
