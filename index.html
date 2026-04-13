@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Storris Innovations – Custom 3D Printed Radiation Therapy Devices</title>
-  <meta name="description" content="Storris Innovations supplies radiation therapy clinics with custom 3D printed bolus, physics QA devices, and ear positioning solutions." />
+  <meta name="description" content="Storris Innovations supplies radiation therapy clinics with custom 3D printed bolus and ear positioning solutions." />
 
   <link rel="stylesheet" href="style.css" />
 
@@ -19,7 +19,7 @@
 
   <!-- NAV -->
   <header class="nav-wrapper" id="navbar">
-    <nav class="nav-inner">
+    <nav class="nav-inner container">
       <a href="#home" class="nav-logo">
         <span class="logo-mark">S</span>
         <span class="logo-text">Storris <span class="logo-accent">Innovations</span></span>
@@ -47,25 +47,44 @@
     <section class="hero" id="home">
       <div class="hero-bg-grid"></div>
 
-      <div class="container hero-content">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-dot"></span>
-          Precision for Radiation Oncology
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot"></span>
+            Precision for Radiation Oncology
+          </div>
+
+          <h1 class="hero-title">
+            Custom 3D Printed Devices<br />
+            <em>Built for the Clinic.</em>
+          </h1>
+
+          <p class="hero-subtitle">
+            We partner with radiation therapy clinics to deliver custom 3D printed bolus
+            and positioning solutions built to your exact specifications.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Explore Products</a>
+            <a href="#contact" class="btn btn-outline">Request a Quote</a>
+          </div>
         </div>
 
-        <h1 class="hero-title">
-          Custom 3D Printed Devices<br />
-          <em>Built for the Clinic.</em>
-        </h1>
-
-        <p class="hero-subtitle">
-          We partner with radiation therapy clinics to deliver custom 3D printed bolus,
-          physics QA devices, and positioning solutions built to your exact specifications.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#products" class="btn btn-primary">Explore Products</a>
-          <a href="#contact" class="btn btn-outline">Request a Quote</a>
+        <div class="hero-visual">
+          <div class="hero-visual-placeholder">
+            <!-- Replace with a product image, 3D render, or illustration -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+              <rect x="40" y="60" width="120" height="100" rx="8" />
+              <line x1="60" y1="60" x2="80" y2="30" />
+              <line x1="160" y1="60" x2="180" y2="30" />
+              <line x1="80" y1="30" x2="180" y2="30" />
+              <line x1="160" y1="60" x2="160" y2="160" />
+              <line x1="180" y1="30" x2="180" y2="130" />
+              <line x1="160" y1="160" x2="180" y2="130" />
+              <circle cx="100" cy="110" r="24" stroke-dasharray="4 3" />
+            </svg>
+            <span>Product image or 3D render</span>
+          </div>
         </div>
       </div>
     </section>
@@ -115,26 +134,36 @@
         <div class="products-grid">
 
           <div class="product-card">
+            <div class="product-icon" aria-hidden="true">
+              <!-- Bolus icon: layered surface -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 28c4-6 10-10 16-10s12 4 16 10" />
+                <path d="M8 22c4-6 10-10 16-10s12 4 16 10" opacity="0.4" />
+                <path d="M8 34c4-6 10-10 16-10s12 4 16 10" opacity="0.2" />
+              </svg>
+            </div>
             <h3>3D Printed Bolus</h3>
             <p>
               Patient-specific bolus designed for consistent surface dose delivery
-              and improved conformity.
+              and improved conformity across treatment sites.
             </p>
           </div>
 
           <div class="product-card">
-            <h3>Physics QA Devices</h3>
-            <p>
-              Custom QA tools built to support your department’s measurement and
-              verification workflows.
-            </p>
-          </div>
-
-          <div class="product-card">
+            <div class="product-icon" aria-hidden="true">
+              <!-- Ear shelf icon: ear + shelf shape -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30 12a12 12 0 0 0-12 12c0 4 2 7 4 9" />
+                <path d="M26 14a8 8 0 0 0-8 8c0 2 1 4 2 5" />
+                <line x1="10" y1="36" x2="38" y2="36" />
+                <line x1="10" y1="36" x2="10" y2="32" />
+                <line x1="38" y1="36" x2="38" y2="32" />
+              </svg>
+            </div>
             <h3>Ear Shelf</h3>
             <p>
               A positioning device designed to hold the ear away from the head during
-              treatment to support accurate setup.
+              treatment to support accurate and repeatable setup.
             </p>
           </div>
 
@@ -154,23 +183,27 @@
         <div class="steps">
 
           <div class="step">
-            <h3>1. Submit Request</h3>
-            <p>Provide your specifications, CT data, or device requirements.</p>
+            <div class="step-number" aria-hidden="true">1</div>
+            <h3>Submit Request</h3>
+            <p>Provide your specifications, CT data, or device requirements through our contact form.</p>
           </div>
 
           <div class="step">
-            <h3>2. Design</h3>
-            <p>We design your device and send it for review and approval.</p>
+            <div class="step-number" aria-hidden="true">2</div>
+            <h3>Design</h3>
+            <p>We design your device and send it for your review and approval before production.</p>
           </div>
 
           <div class="step">
-            <h3>3. Manufacture</h3>
-            <p>We produce your device with precision and quality control.</p>
+            <div class="step-number" aria-hidden="true">3</div>
+            <h3>Manufacture</h3>
+            <p>Your approved device is produced with precision printing and quality control.</p>
           </div>
 
           <div class="step">
-            <h3>4. Delivery</h3>
-            <p>Your device is shipped directly to your clinic.</p>
+            <div class="step-number" aria-hidden="true">4</div>
+            <h3>Delivery</h3>
+            <p>Your finished device is shipped directly to your clinic, ready for use.</p>
           </div>
 
         </div>
@@ -181,21 +214,53 @@
     <section class="contact section-pad" id="contact">
       <div class="container">
 
-        <h2>Contact Us</h2>
-
-        <p>Email: <a href="mailto:info@storrislabs.com">info@storrislabs.com</a></p>
-
-        <form id="contactForm">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-
-        <div id="formSuccess" style="display:none;">
-          Thank you — we’ll be in touch soon.
+        <div class="section-header">
+          <span class="section-label section-label--light">Get in Touch</span>
+          <h2 class="section-title section-title--light">Contact Us</h2>
+          <p class="contact-intro">
+            Have a project in mind or want to learn more? Reach out and we'll get back to you promptly.
+          </p>
         </div>
 
+        <div class="contact-layout">
+
+          <div class="contact-info">
+            <div class="contact-detail">
+              <h3>Email</h3>
+              <a href="mailto:info@storrislabs.com">info@storrislabs.com</a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" name="name" placeholder="Your name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="you@clinic.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Tell us about your project or question" required></textarea>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-submit">Send Message</button>
+            </form>
+
+            <div id="formSuccess" class="form-success" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 12l3 3 5-5" />
+              </svg>
+              <p>Thank you — we'll be in touch soon.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -203,7 +268,9 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; <span id="year"></span> Storris Innovations</p>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Storris Innovations. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

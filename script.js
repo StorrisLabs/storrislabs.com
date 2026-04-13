@@ -15,6 +15,11 @@ window.addEventListener(
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
+function closeMenu() {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}
+
 navToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
@@ -22,10 +27,15 @@ navToggle.addEventListener('click', () => {
 
 // Close mobile menu when a link is clicked
 navLinks.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', closeMenu);
+});
+
+// Close mobile menu on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+    closeMenu();
+    navToggle.focus();
+  }
 });
 
 // ── SMOOTH SCROLL ──
@@ -50,7 +60,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // ── SCROLL REVEAL ──
 const revealEls = document.querySelectorAll(
-  '.product-card, .step, .pillar, .about-visual, .section-header, .contact-info, .contact-form-wrap'
+  '.hero-content, .hero-visual, .product-card, .step, .about-visual, .about-text, .section-header, .contact-info, .contact-form-wrap'
 );
 
 revealEls.forEach((el) => el.classList.add('reveal'));
@@ -82,6 +92,18 @@ const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const success = document.getElementById('formSuccess');
 
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function clearFieldError(field) {
+  field.classList.remove('field-error');
+}
+
+function setFieldError(field) {
+  field.classList.add('field-error');
+}
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -89,15 +111,20 @@ form.addEventListener('submit', async (e) => {
   let valid = true;
 
   required.forEach((field) => {
-    field.style.borderColor = '';
-    if (!field.value.trim()) {
-      field.style.borderColor = '#e74c3c';
+    clearFieldError(field);
+
+    const isEmpty = !field.value.trim();
+    const isEmailField = field.type === 'email';
+    const emailInvalid = isEmailField && !isEmpty && !isValidEmail(field.value.trim());
+
+    if (isEmpty || emailInvalid) {
+      setFieldError(field);
       valid = false;
     }
   });
 
   if (!valid) {
-    const firstInvalid = [...required].find((field) => !field.value.trim());
+    const firstInvalid = form.querySelector('.field-error');
     firstInvalid?.focus();
     return;
   }
@@ -105,11 +132,17 @@ form.addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending…';
 
-  // Temporary success state until form backend is connected
+  // ── Replace this block with your form backend (e.g. Formspree, Netlify Forms) ──
   await new Promise((resolve) => setTimeout(resolve, 1200));
+  // ── End placeholder ──
 
   form.style.display = 'none';
   success.style.display = 'flex';
+});
+
+// Clear error styling when user starts typing
+form.querySelectorAll('[required]').forEach((field) => {
+  field.addEventListener('input', () => clearFieldError(field));
 });
 
 // ── ACTIVE NAV HIGHLIGHT ──
