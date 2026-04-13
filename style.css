@@ -279,6 +279,27 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+/* Subtle radial glow behind the hero visual */
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 90, 36, 0.08) 0%,
+    rgba(46, 49, 86, 0.05) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-visual-placeholder {
@@ -295,6 +316,8 @@ img {
   color: var(--muted);
   font-size: 0.85rem;
   background: var(--soft);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-visual-placeholder svg {
@@ -342,6 +365,44 @@ img {
   background: var(--navy);
   color: #fff;
   transform: translateY(-1px);
+}
+
+/* ── CREDIBILITY STRIP ── */
+.credibility-strip {
+  background: var(--navy);
+  padding: 28px 0;
+}
+
+.credibility-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.credibility-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+}
+
+.credibility-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  flex-shrink: 0;
+  color: var(--orange);
 }
 
 /* ── SECTIONS ── */
@@ -652,6 +713,21 @@ img {
   color: var(--orange);
 }
 
+/* Form submission error */
+.form-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  margin-top: 16px;
+  background: var(--error-bg);
+  border: 1px solid rgba(231, 76, 60, 0.25);
+  border-radius: var(--radius);
+  color: #f87171;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 /* ── FOOTER ── */
 .footer {
   text-align: center;
@@ -704,6 +780,10 @@ img {
   .contact-info {
     text-align: center;
   }
+
+  .credibility-list {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -750,6 +830,11 @@ img {
 
   .steps {
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .credibility-list {
+    flex-direction: column;
     gap: 16px;
   }
 }

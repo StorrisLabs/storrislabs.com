@@ -60,7 +60,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // ── SCROLL REVEAL ──
 const revealEls = document.querySelectorAll(
-  '.hero-content, .hero-visual, .product-card, .step, .about-visual, .about-text, .section-header, .contact-info, .contact-form-wrap'
+  '.hero-content, .hero-visual, .credibility-list, .product-card, .step, .about-visual, .about-text, .section-header, .contact-info, .contact-form-wrap'
 );
 
 revealEls.forEach((el) => el.classList.add('reveal'));
@@ -91,6 +91,7 @@ revealEls.forEach((el) => revealObserver.observe(el));
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const success = document.getElementById('formSuccess');
+const error = document.getElementById('formError');
 
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -106,6 +107,9 @@ function setFieldError(field) {
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  // Hide any previous error message
+  error.style.display = 'none';
 
   const required = form.querySelectorAll('[required]');
   let valid = true;
@@ -132,12 +136,25 @@ form.addEventListener('submit', async (e) => {
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending…';
 
-  // ── Replace this block with your form backend (e.g. Formspree, Netlify Forms) ──
-  await new Promise((resolve) => setTimeout(resolve, 1200));
-  // ── End placeholder ──
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    });
 
-  form.style.display = 'none';
-  success.style.display = 'flex';
+    if (response.ok) {
+      form.style.display = 'none';
+      success.style.display = 'flex';
+    } else {
+      throw new Error(`Server responded with ${response.status}`);
+    }
+  } catch (err) {
+    console.error('Form submission failed:', err);
+    error.style.display = 'flex';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
 });
 
 // Clear error styling when user starts typing
