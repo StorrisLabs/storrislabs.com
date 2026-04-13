@@ -521,18 +521,16 @@ img {
 
 .patent-badge {
   display: inline-block;
-  font-size: 0.6rem;
+  font-family: var(--font-head);
+  font-size: 0.65rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--orange);
   border: 1px solid var(--orange);
   border-radius: 4px;
-  padding: 2px 7px;
-  vertical-align: middle;
-  margin-left: 8px;
-  position: relative;
-  top: -1px;
+  padding: 3px 8px;
+  margin-bottom: 10px;
 }
 
 .product-card p {
