@@ -406,7 +406,7 @@ img {
   background: var(--sage);
   border-radius: 50%;
   flex-shrink: 0;
-  color: var(--navy);
+  color: var(--orange);
 }
 
 /* ── SECTIONS ── */
@@ -849,9 +849,13 @@ img {
   }
 
   .credibility-list {
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    padding-left: 0;
+    width: fit-content;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
