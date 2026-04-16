@@ -849,9 +849,9 @@ img {
   }
 
   .credibility-list {
-    flex-direction: column;
-    gap: 16px;
-  }
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 @media (max-width: 480px) {
