@@ -97,6 +97,7 @@ img {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 1.15rem;
+  color: var(--navy);
 }
 
 .logo-mark {
