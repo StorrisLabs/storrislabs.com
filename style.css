@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────
    STORRIS INNOVATIONS – style.css
-   Colors: #FF5A24 (orange) · #2E3156 (navy)
+   Colors: #FF5A24 (orange) · #2E3156 (navy) · #DCEFE6 (sage)
    Fonts: Poppins + Inter
 ───────────────────────────────────────────── */
 
@@ -18,6 +18,7 @@
   --orange-hover: #e84e1b;
   --navy: #2E3156;
   --navy-light: #3b3f6b;
+  --sage: #DCEFE6;
   --text: #1a1c2e;
   --muted: #6b6f8a;
   --bg: #ffffff;
@@ -451,7 +452,7 @@ img {
 
 /* ── ABOUT ── */
 .about {
-  background: var(--soft);
+  background: var(--sage);
 }
 
 .about-grid {
@@ -541,7 +542,7 @@ img {
 
 /* ── PROCESS ── */
 .process {
-  background: var(--soft);
+  background: var(--sage);
 }
 
 .steps {
